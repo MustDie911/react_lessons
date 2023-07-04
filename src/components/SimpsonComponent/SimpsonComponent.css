@@ -1,0 +1,12 @@
+.simpsonCard {
+    width: 500px;
+    height: 500px;
+    margin-left: 10px;
+    background-color: whitesmoke;
+    border-radius: 20px;
+    margin-top: 10px;
+}
+
+img{
+    height: 300px;
+}
