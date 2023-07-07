@@ -1,27 +1,20 @@
 import {useEffect, useState} from "react";
+import {getFlights} from "../../services/SpaceX.api.service";
 import Flight from "../flight/Flight";
 
-
 export default function Flights() {
+    let [flights, setFlights] = useState([]);
 
-    let [flights,setFlights] = useState([])
+    useEffect(() => {
+        getFlights().then(value => setFlights(value))
+    }, [])
 
-    useEffect(()=>{
-        fetch('https://api.spacexdata.com/v3/launches/')
-            .then(value => value.json())
-            .then(value => {
-                setFlights(value.filter(flight => flight.launch_year !=='2020'));
-            })
-    },[])
-
-    return(
+    return (
         <div>
-            <h1>SpaceX</h1>
-            {flights.map((flight,flight_number) => <Flight
-                key ={flight_number}
+            {flights.map((flight, flight_number) => <Flight
+                key={flight_number}
                 item={flight}
             />)}
         </div>
     )
 }
-
