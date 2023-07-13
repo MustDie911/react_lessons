@@ -1,0 +1,11 @@
+.postComponent{
+    border: black solid 1px;
+    height: 200px;
+    width: 500px;
+    border-radius: 15px;
+    margin-top: 25px;
+    margin-right: 150px;
+    padding: 1px;
+    display: flex;
+    flex-direction: column;
+}
