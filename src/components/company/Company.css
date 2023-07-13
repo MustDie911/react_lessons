@@ -1,0 +1,11 @@
+.company {
+    border: black solid 1px;
+    height: 250px;
+    width: 400px;
+    border-radius: 15px;
+    margin-top: 25px;
+    margin-left: 5px;
+    padding: 5px;
+    display: flex;
+    flex-direction: column;
+}
