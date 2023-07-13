@@ -6,18 +6,16 @@ import Child2 from "./components/Child2/Child2";
 
 import {createContext, useState} from "react";
 
-
-
 export const Context = createContext(null);
 
 function App() {
-    let [child,setChild] = useState("1");
+    let [child, setChild] = useState("value1");
 
     return (
-
-        <Context.Provider value={[child,setChild]}>
+        <Context.Provider value={[child, setChild]}>
             <div>
                 <Child1/>
+                <hr/>
                 <Child2/>
             </div>
         </Context.Provider>
