@@ -1,7 +1,11 @@
 import {useEffect, useState} from "react";
+
 import {getPosts, getUsers} from "../../services/api.axios.service";
+
 import UserComponent from "../userComponent/UserComponent";
+
 import PostComponent from "../postComponent/PostComponent";
+
 import './UsersComponent.css'
 
 
