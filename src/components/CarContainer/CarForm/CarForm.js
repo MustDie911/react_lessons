@@ -22,6 +22,7 @@ const CarForm = ({setSave, innit, setInnit}) => {
     }, [brand, price, year]);
 
     const onSubmit = async (data) => {
+
         const schema = Joi.object({
             brand: Joi.string().pattern(/^[a-zA-Zа-яА-яёЁіІїЇ]{1,20}$/).required(),
             price: Joi.string().pattern(/^[0-9]{1,20}$/).required(),

@@ -12,23 +12,16 @@ export default function CarsComponent() {
     const [innit, setInnit] = useState({id: '', brand: '', price: '', year: ''})
 
     useEffect(() => {
-        getCars()
-            .then((data) => {
-                setCar(data);
-            })
-            .catch((error) => {
-                console.error('Помилка отримання списку авто', error.message);
-            });
+        getCars().then((data) => {
+            setCar(data)
+        })
     }, [save])
 
     const carDelete = id => {
         deleteCar(id)
             .then(() => {
-                setSave((prev) => !prev);
+                setSave((prev) => !prev)
             })
-            .catch((error) => {
-                console.error('Помилка видалення авто', error.message);
-            });
     }
 
     const carUpdate = (id, brand, price, year) => {
