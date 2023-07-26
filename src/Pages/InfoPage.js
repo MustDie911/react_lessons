@@ -1,21 +1,21 @@
-import './App.css';
+import {Link, Outlet} from "react-router-dom";
 
-import RoutesComponent from "./Pages/RoutesComponent";
+export default function InfoPage(){
+    return(
+        <div>
+            <div className={'sub-menu'}>
 
-function App() {
-  return (
-      <div>
-          <RoutesComponent/>
-      </div>
-  );
-
+                <h3>Choose for get info</h3>
+                <ul>
+                    <li><Link to={'todos'}>Get todos</Link></li>
+                    <li><Link to={'albums'}>Get albums</Link></li>
+                    <li><Link to={'comments'}>Get comments</Link></li>
+                </ul>
+            </div>
+            <Outlet/>
+        </div>
+    )
 }
-
-
-
-
-export default App;
-
 
 //реалізувати 3 маршрути
 //todos - при переході на який тягнуться всі todо з https://jsonplaceholder.typicode.com/todos
@@ -27,5 +27,3 @@ export default App;
 //при натисканні на комментар тягнеться пост, до якого належіить цей коментар.
 //приклад запиту https://jsonplaceholder.typicode.com/posts/ID
 //id поста взяти з коментаря (postId)
-//
-//відображати ті чи інші маршрути можна на будь-якому рівні на ваш вибір.
