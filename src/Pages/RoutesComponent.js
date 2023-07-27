@@ -3,9 +3,13 @@ import {Link, Route, Routes} from "react-router-dom";
 import HomePage from "./HomePage";
 
 import InfoPage from "./InfoPage";
+
 import Todos from "../Components/TodosComponents/Todos/Todos";
+
 import Albums from "../Components/AlbumComponents/Albums/Albums";
+
 import Comments from "../Components/CommentComponents/Comments/Comments";
+import Posts from "../Components/PostComponents/Posts/Posts";
 
 export default function RoutesComponent() {
     return (<div>
@@ -18,14 +22,14 @@ export default function RoutesComponent() {
                 </ul>
             </div>
 
-
-
             <Routes>
                 <Route index element={<HomePage/>}/>
                 <Route path={'/info'} element={<InfoPage/>}>
                     <Route path={'todos'} element={<Todos/>}/>
                     <Route path={'albums'} element={<Albums/>}/>
-                    <Route path={'comments'} element={<Comments/>}/>
+                    <Route path={'comments'} element={<Comments/>}>
+                        <Route path={':id'} element={<Posts/>}/>
+                    </Route>/>
                 </Route>
             </Routes>
         </div>

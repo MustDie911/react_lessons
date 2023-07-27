@@ -1,12 +1,12 @@
 import {Link, Outlet} from "react-router-dom";
 
+
 export default function InfoPage(){
     return(
         <div>
             <div className={'sub-menu'}>
-
                 <h3>Choose for get info</h3>
-                <ul>
+                <ul className={'ul'}>
                     <li><Link to={'todos'}>Get todos</Link></li>
                     <li><Link to={'albums'}>Get albums</Link></li>
                     <li><Link to={'comments'}>Get comments</Link></li>

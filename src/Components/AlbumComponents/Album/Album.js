@@ -1,7 +1,13 @@
-export default function Album(){
+export default function Album({value}){
     return(
         <div>
-            Album
+            <div>
+                <hr/>
+                <h3>User: {value.userId}</h3>
+                <h3>ID: {value.id}</h3>
+                <h3>Title: {value.title}</h3>
+                <hr/>
+            </div>
         </div>
     )
 }
